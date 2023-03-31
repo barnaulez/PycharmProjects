@@ -2,9 +2,9 @@ import requests
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
-ALPHA_KEY = "8QXFR0EOWOR22QAJ"
+ALPHA_KEY = "A_KEY"
 RATES_URL = "https://www.alphavantage.co/query"
-NEWS_API_KEY = "d95fde7c3c5e4127b7b2bd345883019b"
+NEWS_API_KEY = "API_KEY"
 
 stocks_parameters = {
     "function": "TIME_SERIES_DAILY_ADJUSTED",
@@ -69,7 +69,7 @@ def get_news(yesterday_date):
         send_message(message)
 
 def send_message(bot_message):
-    bot_token = '5946329067:AAGqI1azQNi_aTxiV-BzhWWaVPPew7-epSw'
+    bot_token = 'BOT_TOKEN'
     bot_chatID = '172133786'
     send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
     response = requests.get(send_text)
