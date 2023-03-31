@@ -19,7 +19,7 @@ import os
 import smtplib
 
 MY_EMAIL = "alexuvin6@gmail.com"
-PASSWORD = "njtkhiswgostspkb"
+PASSWORD = "PASSWORD HERE"
 DIR = "letter_templates"
 month = dt.datetime.now().month
 day = dt.datetime.now().day
