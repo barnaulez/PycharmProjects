@@ -2,12 +2,12 @@ import requests
 from datetime import datetime
 
 #.nutritionix.com API
-API_ID = "831a100e"
-API_KEY = "fa0265cc0b7611325e0e26a3e12eef82"
-SHEETY_KEY = "c6ed8e1a6d1f0e75100e69bf16f6f335"
+API_ID = "API_ID"
+API_KEY = "API_KEY"
+SHEETY_KEY = "SHEETY_KEY"
 SHEETY_PROJECT = "myWorkouts"
 SHEET_NAME = "workouts"
-BEARER_TOKEN = "a;kjhflausfghaiuwreypqui;afhbns.jkgbnas;kfgdjlnagdf[8y5-9834hnfg;kdsav"
+BEARER_TOKEN = "BEARER"
 
 nutrionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 sheety_endpoint = f"https://api.sheety.co/{SHEETY_KEY}/{SHEETY_PROJECT}/{SHEET_NAME}"
