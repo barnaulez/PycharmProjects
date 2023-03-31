@@ -1,10 +1,10 @@
 import requests
 from twilio.rest import Client
 
-api_key = "bccf317ddffdd7eed53730cfd060436d"
+api_key = "API"
 
-account_sid = "ACcf011c3b32cc28036b916f9662f85fed"
-auth_token = "61906d7e98ba2b68ab5c88f9675e198c"
+account_sid = "SID"
+auth_token = "TOKEN"
 MY_LAT = 38.454799
 MY_LON = 27.115196
 
@@ -42,7 +42,7 @@ def send_sms():
 def send_telegram_message():
     get_weather()
     bot_message = ""
-    bot_token = '5946329067:AAGqI1azQNi_aTxiV-BzhWWaVPPew7-epSw'
+    bot_token = 'BOT_TOKEN'
     bot_chatID = '172133786'
     if will_rain:
         bot_message = "Bring an Umbrella"
