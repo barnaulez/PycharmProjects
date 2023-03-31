@@ -1,12 +1,12 @@
 import requests
 from datetime import datetime, timedelta
 USERNAME = "brnman22"
-TOKEN = "edRFlk#123"
-GRAPHID = "brnman01"
+TOKEN = "TOKEN"
+GRAPHID = "ID"
 pixela_endpoint = "https://pixe.la/v1/users"
 
 user_params = {
-    "token": "edRFlk#123",
+    "token": "TOKEN",
     "username": "brnman22",
     "agreeTermsOfService": "yes",
     "notMinor": "yes"
