@@ -1,26 +1,52 @@
 import requests
+import os
 
-SHEETY_KEY = "c6ed8e1a6d1f0e75100e69bf16f6f335"
-SHEETY_PROJECT = "flightDeals"
-SHEET_NAME = "prices"
-BEARER_TOKEN = "adkjgbfsdfgıytqw43rfgqkvfhgalwu34ygvkhasdcasdgafsf"
-SHEETY_ENDPOINT = f"https://api.sheety.co/{SHEETY_KEY}/{SHEETY_PROJECT}/{SHEET_NAME}"
+class DataManager:
 
-header = {"Authorization": f"Bearer {BEARER_TOKEN}"}
+    #This class is responsible for talking to the Google Sheet.
+    def __init__(self):
+        self.sheety_key = os.environ.get("SHEETY_KEY")
+        self.sheety_project = os.environ.get("SHEETY_PROJECT")
+        self.sheet_name = os.environ.get("SHEET_NAME")
+        self.token = os.environ.get("AUTH_TOKEN")
 
-#class DataManager:
-#    #This class is responsible for talking to the Google Sheet.
-#    def __init__(self):
-#        self.details = {
-#            "destination": "",
-#            "iata_code": "",
-#            "price": 0
-#        }
+        self.header = {"Authorization": f"Bearer {self.token}"}
 
-def get_flights():
-    response = requests.get(url=SHEETY_ENDPOINT)
-    response.raise_for_status()
-    data = response.json()
-    print(data)
+        self.sheety_endpoint = f"https://api.sheety.co/{self.sheety_key}/{self.sheety_project}/{self.sheet_name}"
+        print(self.sheety_endpoint)
+        self.details = {
+            "destination": "",
+            "iata_code": "",
+            "price": 0
+        }
 
-get_flights()
+    def get_flights(self):
+        response = requests.get(url=self.sheety_endpoint, headers=self.header)
+        response.raise_for_status()
+        data = response.json()
+        return data["prices"]
+
+    def update_flights(self, flights: list):
+        for flight in flights:
+            endpoint = f"{self.sheety_endpoint}/{flight['id']}"
+            body = {"price": flight}
+            response = requests.put(url=endpoint, json=body, headers=self.header)
+            response.raise_for_status()
+
+    def get_iata(self, city_name):
+        server = os.environ.get("KIWI_SERVER")
+        locations_endpoint = os.environ.get("LOCATIONS_ENDPOINT")
+        endpoint = f"{server}{locations_endpoint}"
+        parameters = {
+            "term": city_name,
+            "location_types": "city",
+            "limit": 1
+        }
+        header = {
+            "apikey":os.environ.get("TEQUILA_KEY")
+        }
+        response = requests.get(url=endpoint, params=parameters, headers=header)
+        response.raise_for_status()
+        return response.json()["locations"][0]["code"]
+
+

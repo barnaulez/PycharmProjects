@@ -1,0 +1,19 @@
+{
+  "search_id": "0ec4266b-f84b-604c-e833-3e24996a4a8d",
+  "currency": "EUR",
+  "fx_rate": 1,
+  "data": [],
+  "_results": 0,
+  "search_params": {
+    "flyFrom_type": "airport",
+    "to_type": "airport",
+    "seats": {
+      "passengers": 4,
+      "adults": 2,
+      "children": 2,
+      "infants": 0
+    }
+  },
+  "all_stopover_airports": [],
+  "sort_version": 0
+}

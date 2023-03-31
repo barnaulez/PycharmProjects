@@ -21,19 +21,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alexander/Documents/GitHub/PycharmProjects/pythonProject/flightDealFinder&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.data_manager">
+}</component>
+  <component name="RunManager" selected="Python.main">
     <configuration name="data_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flightDealFinder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SHEETY_KEY" value="c6ed8e1a6d1f0e75100e69bf16f6f335" />
+        <env name="SHEETY_PROJECT" value="flightDeals" />
+        <env name="SHEET_NAME" value="prices" />
+        <env name="AUTH_TOKEN" value="adkjgbfsdfgytqw43rfgqkvfhgalwu34ygvkhasdcasdgafsf" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -54,7 +60,18 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="AUTH_TOKEN" value="adkjgbfsdfgytqw43rfgqkvfhgalwu34ygvkhasdcasdgafsf" />
+        <env name="BOT_TOKEN" value="5946329067:AAGqI1azQNi_aTxiV-BzhWWaVPPew7-epSw" />
+        <env name="CITY_FROM" value="Izmir" />
+        <env name="KIWI_SERVER" value="https://api.tequila.kiwi.com" />
+        <env name="LOCATIONS_ENDPOINT" value="/locations/query" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SEARCH_ENDPOINT" value="/v2/search" />
+        <env name="SHEET_NAME" value="prices" />
+        <env name="SHEETY_KEY" value="c6ed8e1a6d1f0e75100e69bf16f6f335" />
+        <env name="SHEETY_PROJECT" value="flightDeals" />
+        <env name="TEQUILA_KEY" value="X1o7O4WYNo1_x5tsF7tnNACo3LTou0jH" />
+        <env name="CHAT_ID" value="172133786" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -70,6 +87,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.data_manager" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.data_manager" />

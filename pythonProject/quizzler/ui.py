@@ -10,7 +10,6 @@ class QuizInterface:
         self.window = Tk()
         self.window.title("Quizzler")
         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
-
         self.scores_label = Label(text=f"Score: {self.quiz.score}", bg=THEME_COLOR, fg="white")
         self.scores_label.grid(row=0, column=1, padx=20, pady=20)
         self.canvas = Canvas(width=300, height=250, bg="black")
@@ -34,7 +33,7 @@ class QuizInterface:
         self.canvas.config(bg="white")
         if self.quiz.still_has_questions():
             q_text = self.quiz.next_question()
-            self.canvas.itemconfig(self.question_text, text=q_text)
+            self.canvas.itemconfig(self.question_text, text=q_text, fill="black")
         else:
             self.canvas.itemconfig(self.question_text, text="You've reached the end of the question's list")
             self.true_button.config(state="disabled")
