@@ -6,7 +6,7 @@ import smtplib
 MY_LAT = 38.423733
 MY_LON = 27.142826
 MY_EMAIL = "alexuvin6@gmail.com"
-PASSWORD = "njtkhiswgostspkb"
+PASSWORD = "MY_PASSWORD_HERE"
 parameters = {
     "lat": MY_LAT,
     "lng": MY_LON,
